@@ -15,7 +15,7 @@ export const Header = (props) => {
                   href='#features'
                   className='btn btn-custom btn-lg page-scroll'
                 >
-                  Learn More
+                  Teste grátis por 30 dias
                 </a>{' '}
               </div>
             </div>

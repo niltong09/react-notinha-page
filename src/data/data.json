@@ -1,10 +1,10 @@
 {
   "Header": {
-    "title": "We are a Landing Page",
-    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum."
+    "title": "Notinha.app",
+    "paragraph": "Facilite a gestão, tenha controle do seu financeiro. Envie notificações de cobrança aos seus clientes. Receba online por PIX. E muito mais."
   },
   "About": {
-    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "paragraph": "O Notinha, veio com a missão de facilitar a vida do micro empreendedor, e fornecer acesso a recursos que grandes empresas utilizam, a um custo barato. Acreditamos que os softwares atuais assustam as pessoas, com sua complexidade, e abundacia de funcionalidades. Então resolvemos simplificar o máximo possível, para que todos possam se beneficiar do uso de um sistema informatizado, e a automação de processos cotidianos.",
     "Why": [
       "Lorem ipsum dolor",
       "Tempor incididunt",
@@ -67,34 +67,43 @@
   ],
   "Services": [
     {
-      "icon": "fa fa-wordpress",
-      "name": "Lorem ipsum dolor",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "fa fa-user",
+      "name": "Básico",
+      "text": "Para quem quer ym sistema simples e direto",
+      "itens": [
+        "Emissão de NFe",
+        "Contas a receber",
+        "Emissão de boletos bancários",
+        "Livro Caixa",
+        "5 Usuários"
+      ],
+      "preco": 35
     },
     {
-      "icon": "fa fa-cart-arrow-down",
-      "name": "Consectetur adipiscing",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "fa fa-users",
+      "name": "Médio",
+      "text": "Para quem quer ir além do básico",
+      "itens": [
+        "Emissão de NFe",
+        "Contas a receber",
+        "Emissão de boletos bancários",
+        "Gestão de vendas condicionais",
+        "Contas a pagar",
+        "Compras",
+        "Livro Caixa",
+        "Controle de estoque",
+        "10 Usuários"
+      ],
+      "preco": 40
     },
     {
-      "icon": "fa fa-cloud-download",
-      "name": "Lorem ipsum dolor",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
-    },
-    {
-      "icon": "fa fa-language",
-      "name": "Consectetur adipiscing",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
-    },
-    {
-      "icon": "fa fa-plane",
-      "name": "Lorem ipsum dolor",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
-    },
-    {
-      "icon": "fa fa-pie-chart",
-      "name": "Consectetur adipiscing",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "fa fa-whatsapp",
+      "name": "+ Integração com Whatsapp",
+      "text": "Adicional de integração com Whatsapp",
+      "itens": [
+        "Envie lembretes de vencimento"
+      ],
+      "preco": 15
     }
   ],
   "Testimonials": [
@@ -152,9 +161,9 @@
     }
   ],
   "Contact": {
-    "address": "4321 California St, San Francisco, CA 12345 ",
-    "phone": "+1 123 456 1234",
-    "email": "info@company.com",
+    "address": "",
+    "phone": "",
+    "email": "info@notinha.app.br",
     "facebook": "fb.com",
     "twitter": "twitter.com",
     "youtube": "youtube.com"
@@ -162,23 +171,23 @@
   "Features": [
     {
       "icon": "fa fa-comments-o",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+      "title": "Integração com Whatsapp",
+      "text": "Envie notificações automaticas via whatsapp para seus clientes."
     },
     {
-      "icon": "fa fa-bullhorn",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+      "icon": "fa fa-mobile",
+      "title": "Tudo pelo celular",
+      "text": "Voce não precisa mais de ter um computador, pelo seu celular voce pode fazer tudo que precisa."
     },
     {
       "icon": "fa fa-group",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+      "title": "Trabalhe em conjunto",
+      "text": "Tenha vários usuarios para seus funcionários e colaboradores."
     },
     {
       "icon": "fa fa-magic",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+      "title": "Emissões fiscais",
+      "text": "Emita NFe/NFCe e notas de serviços para seus clientes, envie boletos e solicitações de recebimento por PIX."
     }
   ]
 }
