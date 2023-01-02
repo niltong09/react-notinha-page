@@ -31,6 +31,12 @@ export const Services = (props) => {
                       </div>
                     </div>
                     {d.preco && <h3>R$ {formatNumber(d.preco)}/mês</h3>}
+                    <a
+                  href='https://apl.notinha.app.br/signup'
+                  className='btn btn-custom btn-lg page-scroll'
+                >
+                  Teste grátis por 30 dias
+                </a>{' '}
                   </div>
                 </div>
               ))

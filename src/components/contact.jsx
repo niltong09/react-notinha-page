@@ -1,14 +1,22 @@
 import { useState } from 'react'
-import emailjs from 'emailjs-com'
+import ReCAPTCHA from 'react-google-recaptcha'
+import axios from 'axios'
 
+// 6LfLAscjAAAAAH5dwyY2SXpB4XZ9Jmu66_UcgVQx
+// endpoint
+
+const endpoint = `https://es1410bsge.execute-api.sa-east-1.amazonaws.com/dev/send_contact`;
 const initialState = {
   name: '',
   email: '',
   message: '',
+  token: '',
 }
 export const Contact = (props) => {
-  const [{ name, email, message }, setState] = useState(initialState)
-
+  const [{ name, email, message, token }, setState] = useState(initialState)
+  const [errMsg, setErrMsg] = useState('')
+  const [msg, setMsg] = useState('')
+  
   const handleChange = (e) => {
     const { name, value } = e.target
     setState((prevState) => ({ ...prevState, [name]: value }))
@@ -17,20 +25,21 @@ export const Contact = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(name, email, message)
-    emailjs
-      .sendForm(
-        'YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_USER_ID'
-      )
-      .then(
-        (result) => {
-          console.log(result.text)
-          clearState()
-        },
-        (error) => {
-          console.log(error.text)
-        }
-      )
+    console.log(name, email, message, token)
+    axios.post(endpoint, {
+      name,
+      email,
+      message,
+      token
+    }).catch((err) => {
+      console.log('error on request', err);
+      setMsg('')
+      setErrMsg(`Erro ao enviar contato: ${err}`)
+    }).then(() => {
+      setErrMsg('')
+      setMsg(`Contato enviado com sucesso, aguarde nosso retorno.`)
+      clearState();
+    })
   }
   return (
     <div>
@@ -52,6 +61,7 @@ export const Contact = (props) => {
                         type='text'
                         id='name'
                         name='name'
+                        value={name}
                         className='form-control'
                         placeholder='Nome Completo'
                         required
@@ -66,6 +76,7 @@ export const Contact = (props) => {
                         type='email'
                         id='email'
                         name='email'
+                        value={email}
                         className='form-control'
                         placeholder='Email'
                         required
@@ -79,16 +90,29 @@ export const Contact = (props) => {
                   <textarea
                     name='message'
                     id='message'
+                    value={message}
                     className='form-control'
                     rows='4'
                     placeholder='Mensagem'
                     required
                     onChange={handleChange}
                   ></textarea>
-                  <p className='help-block text-danger'></p>
+                  <p className='help-block text-danger'>
+                    {errMsg}
+                  </p>
                 </div>
-                <div id='success'></div>
-                <button type='submit' className='btn btn-custom btn-lg'>
+                <ReCAPTCHA
+                  sitekey='6LfLAscjAAAAAH5dwyY2SXpB4XZ9Jmu66_UcgVQx'
+                  onChange={(token) => {
+                    console.log('token', token)
+                    setState((prevState) => ({ ...prevState, token }))
+                  }
+                  }
+                  />
+                <div id='success'>{msg}</div>
+                <button type='submit' 
+                  disabled={!token || !email || !name || !message}
+                  className='btn btn-custom btn-lg'>
                   Enviar
                 </button>
               </form>
